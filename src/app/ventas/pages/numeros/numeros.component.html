@@ -1,0 +1,83 @@
+
+<div class="text-layout">
+    <h1>DecimalPipe, CurrencyPipe y Porcentaje</h1>
+    <p>
+        Pipes incluídos en Angular - Usualmente en el Common Module.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Ventas netas"
+                subheader="del presente año">
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventasNetas | number }}
+                </li>
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventasNetas | number:'1.2-2' }}
+                </li>
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventasNetas | number:'1.2-5'  }}
+                </li>
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventasNetas | number:'1.5-5'  }}
+                </li>
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventasNetas | number:'1.5-5':'en'  }}
+                </li>
+  
+
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="Ventas brutas"
+                subheader="del presente año">
+                <li>
+                    {{ ventasNetas + 21254255 | currency }}
+                </li>
+                <li>
+                    {{ ventasNetas + 21254255 | currency:'BsF' }}
+                </li>
+                <li>
+                    {{ ventasNetas + 21254255 | currency:'':'symbol-narrow'  }}
+                </li>
+                <li>
+                    {{ ventasNetas + 21254255 | currency:'ARS':'symbol-narrow'  }}
+                </li>
+                <li>
+                    {{ ventasNetas + 21254255 | currency:'ARS':'symbol-narrow':'1.6-6' }}
+                </li>
+  
+
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="Ganacia porcentual"
+                subheader="del presente año">
+                <li>
+                    {{ porcentaje  | percent }}
+                </li>
+                <li>
+                    {{ porcentaje  | percent:'2.2-2' }}
+                </li>
+                <li>
+                    {{ porcentaje  | percent:'2.2-2':'en' }}
+                </li>
+                <li>
+                    {{ porcentaje  | percent:'3.3-3' }}
+                </li>
+                <li>
+                    {{ porcentaje  | percent:'1.1-1' }}
+                </li>
+  
+
+        </p-card>
+    </div>
+</div>
